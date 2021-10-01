@@ -54,7 +54,7 @@ public class EU6UtilitySolution {
     // we can do this with utility class as well
 
     @Test
-    public void purchaseTest(){
+    public void purchaseTest() throws InterruptedException {
 
         String[][] purchaseInfo = new String[][] {{"Laptops","Sony vaio i5"}, {"Laptops","Dell i7 8gb"},
                 {"Monitors","Apple monitor 24"},{"Phones","Nexus 6"}};
@@ -91,6 +91,7 @@ public class EU6UtilitySolution {
         System.out.println("expectedOrderAmmount = " + expectedPurhaseAMount);
         Assert.assertEquals(actualAmount,expectedPurhaseAMount,"The price do NOT match");
 
+        Thread.sleep(2000);
         driver.findElement(By.xpath("//button[@class='confirm btn btn-lg btn-primary']")).click();
 
 
