@@ -100,9 +100,9 @@ public class EU6UtilitySolution {
 
 
    private int productAdder(String category, String product){
-       driver.findElement(By.xpath("//a[.='"+category+"']")).click();
+       driver.findElement(By.linkText(category)).click();
 
-        driver.findElement(By.xpath("//a[.='"+product+"']")).click();
+        driver.findElement(By.linkText(product)).click();
 
         WebElement purchasePrice = driver.findElement(By.xpath("//h3[@class='price-container']"));
         String amountString = purchasePrice.getText();
