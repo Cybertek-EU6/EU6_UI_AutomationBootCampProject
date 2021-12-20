@@ -26,6 +26,8 @@ public class TestBaseAdidas {
     wait = new WebDriverWait(driver,10);
     driver.get(url);
 
+    // reporting
+
 }
 
 @AfterMethod
@@ -33,6 +35,7 @@ public class TestBaseAdidas {
 
     driver.close();
 
+    // screenshot
 
 }
 
