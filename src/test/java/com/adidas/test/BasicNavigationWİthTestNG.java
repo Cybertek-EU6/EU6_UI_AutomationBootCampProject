@@ -13,19 +13,18 @@ import java.util.List;
 
 public class BasicNavigationWİthTestNG extends TestBaseAdidas {
 
-    @Test
-
+    @Test (priority = 1)
     public void testNavigation(){
 
 
         AdidasHomePage homePage = new AdidasHomePage();
+
 
         List<WebElement> prices = homePage.prices;
 
         for (WebElement price : prices) {
             System.out.println("price.getText() = " + price.getText());
         }
-
 
         homePage.Laptops.click();
 
@@ -35,5 +34,13 @@ public class BasicNavigationWİthTestNG extends TestBaseAdidas {
 
 
     }
+
+  //  @Test (priority = 2)
+    public void basicNavigation(){
+
+
+    }
+
+    // If I don't add priority next to @Test annotation, it runs in ASCII alphabetic order
 
 }
