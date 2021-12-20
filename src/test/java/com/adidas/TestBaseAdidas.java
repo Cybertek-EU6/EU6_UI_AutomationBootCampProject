@@ -33,7 +33,8 @@ public class TestBaseAdidas {
 @AfterMethod
     public void tearDown(){
 
-    driver.close();
+   // driver.close();
+    Driver.closeDriver();
 
     // screenshot
 
